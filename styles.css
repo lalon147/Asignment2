@@ -1,0 +1,351 @@
+/***********************************
+**********************  USE OF GOOGLE FONTS
+            ****************************/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,100;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;1,100;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,500;1,100;1,600&display=swap');
+
+/**********************
+*********************** START OF STYLES
+                            *******************/
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+    
+    margin:0;
+}
+
+/** MAIN SECTION IS CONSIST OF SIDE BAR AND BLOGS NOTHINGS ELSE**/
+main{
+    display: flex;
+    max-width: 1280px;
+    margin:10% auto;
+   
+}
+/*************************
+*******************START OF HEADER STYLE****************************/
+
+header{
+    max-width: 1280px;
+    margin:0 auto;
+    display: flex;
+    border-radius: 20px;;
+    background-color:rgba(0,0,0,0.87);
+    justify-content: space-around;
+    align-items: center;
+    color:whitesmoke;
+    
+}
+.header-info button{
+    color: white;
+    background-color:black;
+    margin-top: 5%;
+    padding:2% 5%;
+    border-radius: 20px;
+    transition: transform 0.9s;/******HOVER EFFECT OF TRANSFORM *******/
+}
+.header-info button:hover{
+    background-color:white;
+    color:black;
+    transform: scale(1.2);
+}
+
+.header-info h1 {
+ word-spacing: 10px;
+}
+.header-info p{
+    margin-top: 10px;
+   
+}
+/***************************
+*********************END OF HEADER STYLE****************************/
+
+
+
+
+
+
+
+
+
+/**************************START OF SIDE BAR STYLE *************************/
+.side-bar{
+    background-color: rgba(0,0,0,0.87);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 20vh;
+    justify-content: space-around;
+    margin-right: 5%;
+    padding: 2%;
+}
+.side-bar a{
+    padding:0 10px;
+    color: black;
+    background-color:white;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.9s ; /******HOVER EFFECT OF TRANSFORM *******/
+    
+}
+.side-bar a:hover{
+    background-color: black;
+    color:white;
+    transform: scale(1.2);
+}
+.side-bar a:visited{
+    background-color: tomato; /*****If clicked then it will be tomato color*/
+}
+
+
+
+
+
+
+
+/*************************************
+END OF SIDE BAR STYLE
+********************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*****************************
+START OF BLOG SECTION STYLE 
+***********************/
+
+
+.blog{
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+}
+article{
+   display: flex;
+   flex-direction: column;
+   background-color: whitesmoke;
+   border-radius: 10px;       
+}
+
+.article-image img{
+    width:100%
+}
+.article-info{
+    margin: 20px;
+}
+.article-info button{
+    margin-bottom: 10px;
+}
+.article-info p{
+    word-spacing: 3px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.article-info i{
+    margin: 0 5px;
+}
+
+
+/****************************************
+*****************************END OF BLOG STYLES******************
+*****************************************/
+
+
+
+
+
+
+
+/*******************************START OF FOOTER STYLE**********************/
+
+footer{
+    background-color: rgba(0,0,0,0.87);
+    color: whitesmoke;
+    padding: 10% auto;
+    text-align: center;
+    
+    
+    
+    
+}
+.footer-section{
+    margin: 5% auto;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+footer a{
+    text-decoration: none;
+    color:white
+}
+.follow-us{
+    width: 50%;
+    display: flex;
+    justify-content:space-around;
+    padding: 5%;
+    margin: 0 auto  
+    
+}
+hr{
+    width: 50%;
+    margin:5% auto;
+}
+/**************************************
+*******************************END OF FOOTER STYLE************************
+
+***************************************/
+
+
+
+
+/*********************  STYLE OF THE VIEW MORE BUTTON WHICH WILL DISPLAY IN SPECIAL CASES****************************/
+.special-display{
+    width:20%;
+    font-size: 1.2em;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-bottom:5%;
+    position: relative;
+    left:40vw;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+/*****************************
+      ADDING OF MEDIA QUERIES
+*****************************/
+
+
+
+    /************************
+             FOR MOBILE DEVICES
+                              ************************/
+@media screen and (max-width:576px) {
+    header .header-info p{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    header,main{
+        margin: 10.92px;
+    }
+    .side-bar{
+        margin-right: 0;
+    }
+    header{
+        flex-direction:column;
+        font-size: 0.7em;
+        justify-content: flex-start;
+        padding-top: 2%;
+        }
+    main{
+        flex-direction: column;
+        margin-bottom: 10%;
+        
+    }
+    .blog{
+        grid-template-columns: 1fr;
+        margin-top: 5%;
+    }
+    .follow-us{
+        flex-direction: column;
+    }
+    .footer-section{
+        flex-direction: column;
+        
+    }    
+}
+
+
+    /************************
+           END        END           END        FOR MOBILE DEVICES
+                              ************************/
+
+
+/************************
+*************FOR TABLET DEVICES***************/
+@media screen and (max-width:992px) and (min-width:577px)  {
+    header,main{
+        margin: 10.92px;
+        padding: 10.92px;
+    }
+    main{
+        flex-direction: column;
+    }
+    .side-bar{
+        flex-direction: row;
+        height: auto;
+        justify-content: space-evenly;
+        margin-bottom: 5%;
+        margin-right: 0;
+        
+
+    }
+    
+    .blog{
+        grid-template-columns: 1fr 1fr;
+    }
+    .special-display{
+        display: inline-block;;
+    }
+}                              
+/**************************
+For larger Devices
+*******************/
+ @media screen and (min-width:1024px) {
+      header{
+        margin:0 5% ;
+      }
+      main{
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****************************
+           END OF MEDIA QUERIES
+*****************************/            

@@ -1,0 +1,11 @@
+.flag{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+.match-info{
+    padding: 20px;
+}
+.flag p{
+    margin: 0 5px;
+}
